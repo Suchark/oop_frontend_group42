@@ -75,63 +75,13 @@ body {
   height: 100%;
 }
 
-.start-button-container {
-  display: flex;
-  justify-content: center;
-  position: absolute;
-  bottom: 65px;
-  /* ปรับตำแหน่งลงมาเล็กน้อย */
-  left: 61%;
+#Wait {
+  position: fixed;
+  left: 51%;
+  bottom: 12%;
   transform: translateX(-50%);
-  /* ย้ายตำแหน่งปุ่มไปที่แนวกลางด้านนอน */
-  z-index: 1001;
-  /* ให้ z-index มากกว่า #logo */
-}
-
-.start-button {
-  background-color: #a7f058;
-  color: #309300;
-  border: 6px solid #62d32b;
-  border-radius: 30px;
-  padding: 12px 70px;
-  font-size: 30px;
-  font-weight: bold;
-  text-align: center;
-  font-family: "alegreya-sans sc-regular";
-  text-decoration: none;
-}
-
-.start-button:hover {
-  background-color: rgb(33, 141, 33);
-  color: lightgreen;
-}
-
-.Join-button-container {
-  display: flex;
-  justify-content: center;
-  position: absolute;
-  bottom: -25px;
-  /* ปรับตำแหน่งลงมาเล็กน้อย */
-  left: 61%;
-  transform: translateX(-50%);
-  /* ย้ายตำแหน่งปุ่มไปที่แนวกลางด้านนอน */
-  z-index: 1001;
-  /* ให้ z-index มากกว่า #logo */
-}
-
-.Join-button {
-  background-color: #ec3f5a;
-  color: #fed3e7;
-  border: 6px solid #cb1a34;
-  border-radius: 30px;
-  padding: 12px 80px;
-  font-size: 30px;
-  font-weight: bold;
-  text-align: center;
-  font-family: "alegreya-sans sc-regular";
-}
-
-.Join-button:hover {
-  background-color: #ff677d;
-  color: rgb(167, 1, 1);
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  color: #573500;
 }

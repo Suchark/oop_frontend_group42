@@ -1,16 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
-
-/* สร้าง CSS class สำหรับการใช้งานฟอนต์ Source Code Pro */
-
 .source-code-pro {
   font-family: "Source Code Pro", monospace;
   font-optical-sizing: auto;
   font-weight: 400;
-  /* ปรับตามความต้องการ */
   font-style: normal;
-  /* ปรับตามความต้องการ */
 }
 
 .ubuntu-mono-regular {
@@ -25,13 +20,10 @@
   font-style: normal;
 }
 
-/* สร้าง CSS class สำหรับการใช้งานฟอนต์ Source Code Pro */
-
 .source-code-pro {
   font-family: "Source Code Pro", monospace;
   font-optical-sizing: auto;
   font-weight: 400;
-  /* ปรับเป็นค่าที่คุณต้องการ */
   font-style: normal;
 }
 
@@ -39,30 +31,26 @@
   position: fixed;
   z-index: -1;
   width: 100vw;
-  /* กำหนดความกว้างให้เท่ากับความกว้างของ viewport */
   height: 100vh;
-  /* กำหนดความสูงให้เท่ากับความสูงของ viewport */
   top: 0;
   left: 0;
 }
-
-/* ส่วนที่เหลือของ CSS ให้คงไว้เหมือนเดิม */
 
 #wallpaper img {
   width: 100%;
   height: 100%;
 }
 
-#logo {
+#logoWait {
   position: fixed;
-  top: 40%;
-  left: 45%;
+  top: 15%;
+  left: 60%;
   transform: translate(-50%, -50%);
   z-index: 1000;
 }
 
-#logo img {
-  width: 120%;
+#logoWait img {
+  width: 50%;
   height: auto;
 }
 
@@ -75,63 +63,66 @@ body {
   height: 100%;
 }
 
-.start-button-container {
-  display: flex;
-  justify-content: center;
-  position: absolute;
-  bottom: 65px;
-  /* ปรับตำแหน่งลงมาเล็กน้อย */
-  left: 61%;
+#Enter {
+  position: fixed;
+  left: 50%;
+  bottom: 100%;
   transform: translateX(-50%);
-  /* ย้ายตำแหน่งปุ่มไปที่แนวกลางด้านนอน */
-  z-index: 1001;
-  /* ให้ z-index มากกว่า #logo */
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+  color: #573500;
 }
 
-.start-button {
+.startWait-button {
   background-color: #a7f058;
   color: #309300;
   border: 6px solid #62d32b;
-  border-radius: 30px;
-  padding: 12px 70px;
-  font-size: 30px;
+  border-radius: 40px;
+  padding: 12px 60px;
+  font-size: 24px;
   font-weight: bold;
   text-align: center;
   font-family: "alegreya-sans sc-regular";
   text-decoration: none;
 }
 
-.start-button:hover {
+.startWait-button:hover {
   background-color: rgb(33, 141, 33);
   color: lightgreen;
 }
 
-.Join-button-container {
+.startWait-button-container {
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1001;
+}
+
+.centered-box {
   display: flex;
   justify-content: center;
-  position: absolute;
-  bottom: -25px;
-  /* ปรับตำแหน่งลงมาเล็กน้อย */
-  left: 61%;
-  transform: translateX(-50%);
-  /* ย้ายตำแหน่งปุ่มไปที่แนวกลางด้านนอน */
-  z-index: 1001;
-  /* ให้ z-index มากกว่า #logo */
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
 }
 
-.Join-button {
-  background-color: #ec3f5a;
-  color: #fed3e7;
-  border: 6px solid #cb1a34;
+.empty-frame-container {
+  position: relative;
+}
+
+.empty-frame {
+  width: 30%;
+  height: 400px;
+  border: 5px solid #f7d163;
   border-radius: 30px;
-  padding: 12px 80px;
-  font-size: 30px;
-  font-weight: bold;
-  text-align: center;
-  font-family: "alegreya-sans sc-regular";
-}
-
-.Join-button:hover {
-  background-color: #ff677d;
-  color: rgb(167, 1, 1);
+  box-sizing: border-box;
+  position: absolute;
+  top: 53%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
 }
