@@ -32,7 +32,7 @@ function StartPage() {
           <input
             className="nameinput-container"
             name="name"
-            placeholder="INPUT YOUR NAME"
+            placeholder="INPUT YOUR NAME . . ."
             onChange={(event) => handleNameChange(event.target.value)}
           />
         </div>
