@@ -31,7 +31,6 @@
   font-family: "Source Code Pro", monospace;
   font-optical-sizing: auto;
   font-weight: 400;
-  /* ปรับเป็นค่าที่คุณต้องการ */
   font-style: normal;
 }
 
@@ -39,9 +38,7 @@
   position: fixed;
   z-index: -1;
   width: 100vw;
-  /* กำหนดความกว้างให้เท่ากับความกว้างของ viewport */
   height: 100vh;
-  /* กำหนดความสูงให้เท่ากับความสูงของ viewport */
   top: 0;
   left: 0;
 }
@@ -116,15 +113,28 @@ body {
 
 .name-box {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  /* จัดให้เนื้อหาตรงกลางในแนวตั้ง */
   align-items: center;
-  width: 100vw;
-  height: 100vh;
+  /* จัดให้เนื้อหาตรงกลางในแนวนอน */
 }
 
 .nameinput-container {
-  width: 50%;
-  border: 2px solid #6c4d32;
-  border-radius: 10px;
+  border: 5px solid #6c4d32;
+  border-radius: 50px;
   padding: 20px;
+  font-size: 20px;
+  text-align: center;
+  width: 33%;
+  position: absolute;
+  bottom: 37%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fffded;
+}
+
+.nameinput-container::placeholder {
+  color: #d8ceb4;
+  /* กำหนดสีน้ำตาลให้กับ placeholder */
 }
