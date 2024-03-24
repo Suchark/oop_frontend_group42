@@ -9,10 +9,12 @@ import { useNavigate } from "react-router-dom";
 function Home() {
   const navigate = useNavigate();
   const navigateToStart = () => {
+    localStorage.setItem("host", true);
     navigate("/start");
   };
   const navigateToJoin = () => {
-    navigate("/join");
+    localStorage.setItem("host", false);
+    navigate("/start");
   };
 
   return (

@@ -27,6 +27,27 @@
   font-style: normal;
 }
 
+.Map {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  left: 0%;
+  background-image: url("../image/wallpaper.jpg");
+  top: 0%;
+}
+
+.topBar {
+  display: flex;
+}
+
+.map-page {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
 #wallpaper {
   position: fixed;
   z-index: -1;
@@ -41,24 +62,161 @@
   height: 100%;
 }
 
-#logoMap {
-  position: fixed;
-  top: 40%;
-  left: 45%;
-  transform: translate(-50%, -50%);
-  z-index: 1000;
-}
-
-#logoMap img {
-  width: 120%;
-  height: auto;
-}
-
 body {
   overflow: hidden;
 }
 
 #Clouds img {
   width: 100%;
+  height: 100%;
+}
+
+.User-Join-name {
+  position: fixed;
+  /* ระยะของข้อความจากด้านล่าง */
+  left: 25%;
+  top: 4.5%;
+  /* ระยะของข้อความจากด้านซ้าย */
+  font-family: "Source Code Pro", monospace;
+  font-size: 25px;
+  font-weight: 600;
+  font-style: normal;
+  text-align: left;
+}
+
+.container-content {
+  display: flex;
+  height: 75%;
+  /* background-color: black; */
+}
+
+.map-show-regions {
+  overflow: auto;
+  padding-block: 3%;
+  width: 50%;
+  padding-inline: 4%;
+}
+
+.map-show-regions::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+.map-show-regions::-webkit-scrollbar-track {
+  border-radius: 500px;
+}
+
+.map-show-regions::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+  border: none;
+}
+
+.rowcss {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -8.7%;
+}
+
+.low {
+  margin-top: 8%;
+  margin-left: -3%;
+  margin-right: -3%;
+}
+
+.bottom-bar {
+  display: flex;
+  flex-direction: column;
+  font-family: "Source Code Pro", monospace;
+  font-size: 60px;
+  font-weight: 500;
+  font-style: normal;
+  text-align: left;
+  align-items: flex-start;
+  margin-left: 2%;
+  bottom: 0%;
+  margin-top: -2.5%;
+}
+
+.plan {
+  font-family: "Source Code Pro", monospace;
+  font-size: 25px;
+  font-weight: 600;
+  font-style: normal;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+}
+
+.container-plan {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2.5%;
+  margin-top: -3%;
+}
+
+.budget-box {
+  border: 2px #a7f058 solid;
+  border-radius: 30px;
+  justify-content: center;
+  display: flex;
+  padding: 15px 70px;
+  font-family: "Source Code Pro", monospace;
+  font-size: 25px;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.Change-button {
+  background-color: #a7f058;
+  color: #309300;
+  border: 6px solid #62d32b;
+  border-radius: 30px;
+  padding: 10px 30px;
+  font-size: 26px;
+  font-weight: bold;
+  text-align: center;
+  font-family: "alegreya-sans sc-regular";
+  margin-top: 5%;
+}
+
+.Change-button:disabled {
+  cursor: not-allowed;
+}
+
+.Change-button:hover {
+  background-color: rgb(33, 141, 33);
+  color: lightgreen;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.End-button {
+  background-color: #ec3f5a;
+  color: #fffbff;
+  border: 6px solid #cb1a34;
+  border-radius: 30px;
+  padding: 10px 50px;
+  font-size: 26px;
+  font-weight: bold;
+  text-align: center;
+  font-family: "alegreya-sans sc-regular";
+  margin-top: 5%;
+  margin-left: 10%;
+}
+
+.End-button:disabled {
+  cursor: not-allowed;
+}
+
+.End-button:hover {
+  background-color: #fffbff;
+  color: #de7888;
+}
+
+.inputplan {
   height: 100%;
 }

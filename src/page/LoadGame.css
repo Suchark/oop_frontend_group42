@@ -53,7 +53,7 @@
   height: 100%;
 }
 
-#logo {
+#Loadlogo {
   position: fixed;
   top: 40%;
   left: 45%;
@@ -61,7 +61,7 @@
   z-index: 1000;
 }
 
-#logo img {
+#Loadlogo img {
   width: 120%;
   height: auto;
 }
@@ -84,4 +84,38 @@ body {
   font-weight: 600;
   font-size: 20px;
   color: #573500;
+}
+
+.loading-tube-horizontal {
+  position: absolute;
+  top: 85%;
+  left: 62%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  /* ปรับขนาดของหลอดตามต้องการ */
+  height: 37px;
+  /* ปรับขนาดของหลอดตามต้องการ */
+  border: 4px solid #776100;
+  /* สีของกรอบหลอด */
+  border-radius: 25px;
+  /* ความโค้งของขอบหลอด */
+  overflow: hidden;
+}
+
+.liquid-horizontal {
+  width: 90%;
+  height: 100%;
+  background-color: #776100;
+  /* สีของของเหลวภายในหลอด */
+  animation: fill-horizontal 8s infinite;
+  /* ความเร็วในการเติมเหลวภายในหลอด */
+}
+
+@keyframes fill-horizontal {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
 }

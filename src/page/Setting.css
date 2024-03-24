@@ -1,0 +1,545 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+.source-code-pro {
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.ubuntu-mono-regular {
+  font-family: "Ubuntu Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.alegreya-sans sc-regular {
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.source-code-pro {
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#wallpaper {
+  position: fixed;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+
+#wallpaper img {
+  width: 100%;
+  height: 100%;
+}
+
+.buttonSetting-container {
+  display: flex;
+  padding-top: 2rem;
+  justify-content: center;
+  /* ปรับตำแหน่งลงมาเล็กน้อย */
+  /* left: 50%; */
+  /* transform: translateX(-50%); */
+  /* ย้ายตำแหน่งปุ่มไปที่แนวกลางด้านนอน */
+  /* ให้ z-index มากกว่า #logo */
+}
+
+.buttonSetting-button {
+  background-color: #a7f058;
+  color: #309300;
+  border: 6px solid #62d32b;
+  border-radius: 30px;
+  padding: 10px 150px;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  font-family: "alegreya-sans sc-regular";
+  text-decoration: none;
+}
+
+.playerString {
+  font-family: "Source Code Pro", monospace;
+  font-size: 29px;
+  color: #573500;
+  font-weight: 600;
+  margin-top: -1%;
+}
+
+.playerHead {
+  margin-left: 20%;
+  margin-top: 80px;
+}
+
+.playerTwo {
+  margin-left: 44%;
+  margin-top: -65px;
+}
+
+/* สร้างสีเบื้องหลังสำหรับช่อง check choice */
+
+#radioisTwoPlayer {
+  appearance: none;
+  width: 30px;
+  height: 30px;
+  border: 3px solid #573500;
+  border-radius: 100%;
+  cursor: pointer;
+  position: absolute;
+  margin-left: -50px;
+}
+
+#radioisTwoPlayer:hover {
+  border-color: #ec3f5a;
+}
+
+#radioisTwoPlayer::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 15px;
+  height: 15px;
+  background-color: #ec3f5a;
+  border: 2px solid #573500;
+  border-radius: 100%;
+  visibility: hidden;
+}
+
+#radioisTwoPlayer:checked::before {
+  visibility: visible;
+}
+
+.playerThree {
+  margin-left: 65%;
+  margin-top: -66px;
+}
+
+#radioisThreePlayer {
+  appearance: none;
+  width: 30px;
+  height: 30px;
+  border: 3px solid #573500;
+  border-radius: 100%;
+  cursor: pointer;
+  position: absolute;
+  margin-left: -50px;
+}
+
+#radioisThreePlayer:hover {
+  border-color: #ec3f5a;
+}
+
+#radioisThreePlayer::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 15px;
+  height: 15px;
+  background-color: #ec3f5a;
+  border: 2px solid #573500;
+  border-radius: 100%;
+  visibility: hidden;
+}
+
+#radioisThreePlayer:checked::before {
+  visibility: visible;
+}
+
+.playerSpace {
+  font-family: "Source Code Pro", monospace;
+  font-size: 29px;
+  color: #573500;
+  font-weight: 600;
+}
+
+.playerSpaceHead {
+  margin-left: 20%;
+  margin-top: 80px;
+}
+
+.seven {
+  margin-left: 44%;
+  margin-top: -62px;
+}
+
+#radioisSevenSpace {
+  appearance: none;
+  width: 30px;
+  height: 30px;
+  border: 3px solid #573500;
+  border-radius: 100%;
+  cursor: pointer;
+  position: absolute;
+  margin-left: -50px;
+}
+
+#radioisSevenSpace:hover {
+  border-color: #ec3f5a;
+}
+
+#radioisSevenSpace::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 15px;
+  height: 15px;
+  background-color: #ec3f5a;
+  border: 2px solid #573500;
+  border-radius: 100%;
+  visibility: hidden;
+}
+
+#radioisSevenSpace:checked::before {
+  visibility: visible;
+}
+
+.eleven {
+  margin-left: 62%;
+  margin-top: -66px;
+}
+
+#radioiselevenSpace {
+  appearance: none;
+  width: 30px;
+  height: 30px;
+  border: 3px solid #573500;
+  border-radius: 100%;
+  cursor: pointer;
+  position: absolute;
+  margin-left: -50px;
+}
+
+#radioiselevenSpace:hover {
+  border-color: #ec3f5a;
+}
+
+#radioiselevenSpace::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 15px;
+  height: 15px;
+  background-color: #ec3f5a;
+  border: 2px solid #573500;
+  border-radius: 100%;
+  visibility: hidden;
+}
+
+#radioiselevenSpace:checked::before {
+  visibility: visible;
+}
+
+.fifteen {
+  margin-left: 44%;
+  margin-top: -10px;
+}
+
+#radioisFifteenSpace {
+  appearance: none;
+  width: 30px;
+  height: 30px;
+  border: 3px solid #573500;
+  border-radius: 100%;
+  cursor: pointer;
+  position: absolute;
+  margin-left: -50px;
+}
+
+#radioisFifteenSpace:hover {
+  border-color: #ec3f5a;
+}
+
+#radioisFifteenSpace::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 15px;
+  height: 15px;
+  background-color: #ec3f5a;
+  border: 2px solid #573500;
+  border-radius: 100%;
+  visibility: hidden;
+}
+
+#radioisFifteenSpace:checked::before {
+  visibility: visible;
+}
+
+.random {
+  margin-left: 62%;
+  margin-top: -66px;
+}
+
+#radioisRandomSpace {
+  appearance: none;
+  width: 30px;
+  height: 30px;
+  border: 3px solid #573500;
+  border-radius: 100%;
+  cursor: pointer;
+  position: absolute;
+  margin-left: -50px;
+}
+
+#radioisRandomSpace:hover {
+  border-color: #ec3f5a;
+}
+
+#radioisRandomSpace::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 15px;
+  height: 15px;
+  background-color: #ec3f5a;
+  border: 2px solid #573500;
+  border-radius: 100%;
+  visibility: hidden;
+}
+
+#radioisRandomSpace:checked::before {
+  visibility: visible;
+}
+
+.playerTime {
+  font-family: "Source Code Pro", monospace;
+  font-size: 29px;
+  color: #573500;
+  font-weight: 600;
+}
+
+.playerTimeHead {
+  margin-left: 20%;
+  margin-top: 80px;
+}
+
+.fifteenMin {
+  margin-left: 44%;
+  margin-top: -62px;
+}
+
+#radioisTimefifteenMin {
+  appearance: none;
+  width: 30px;
+  height: 30px;
+  border: 3px solid #573500;
+  border-radius: 100%;
+  cursor: pointer;
+  position: absolute;
+  margin-left: -50px;
+}
+
+#radioisTimefifteenMin:hover {
+  border-color: #ec3f5a;
+}
+
+#radioisTimefifteenMin::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 15px;
+  height: 15px;
+  background-color: #ec3f5a;
+  border: 2px solid #573500;
+  border-radius: 100%;
+  visibility: hidden;
+}
+
+#radioisTimefifteenMin:checked::before {
+  visibility: visible;
+}
+
+.thirtyMin {
+  margin-left: 62%;
+  margin-top: -65px;
+}
+
+#radioisTimethirtyMin {
+  appearance: none;
+  width: 30px;
+  height: 30px;
+  border: 3px solid #573500;
+  border-radius: 100%;
+  cursor: pointer;
+  position: absolute;
+  margin-left: -50px;
+}
+
+#radioisTimethirtyMin:hover {
+  border-color: #ec3f5a;
+}
+
+#radioisTimethirtyMin::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 15px;
+  height: 15px;
+  background-color: #ec3f5a;
+  border: 2px solid #573500;
+  border-radius: 100%;
+  visibility: hidden;
+}
+
+#radioisTimethirtyMin:checked::before {
+  visibility: visible;
+}
+
+.fortyfiveMin {
+  margin-left: 44%;
+  margin-top: -10px;
+}
+
+#radioisTimefortyfiveMin {
+  appearance: none;
+  width: 30px;
+  height: 30px;
+  border: 3px solid #573500;
+  border-radius: 100%;
+  cursor: pointer;
+  position: absolute;
+  margin-left: -50px;
+}
+
+#radioisTimefortyfiveMin:hover {
+  border-color: #ec3f5a;
+}
+
+#radioisTimefortyfiveMin::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 15px;
+  height: 15px;
+  background-color: #ec3f5a;
+  border: 2px solid #573500;
+  border-radius: 100%;
+  visibility: hidden;
+}
+
+#radioisTimefortyfiveMin:checked::before {
+  visibility: visible;
+}
+
+.noLimitn {
+  margin-left: 62%;
+  margin-top: -66px;
+}
+
+#radioisTimenoLimitMin {
+  appearance: none;
+  width: 30px;
+  height: 30px;
+  border: 3px solid #573500;
+  border-radius: 100%;
+  cursor: pointer;
+  position: absolute;
+  margin-left: -50px;
+}
+
+#radioisTimenoLimitMin:hover {
+  border-color: #ec3f5a;
+}
+
+#radioisTimenoLimitMin::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 15px;
+  height: 15px;
+  background-color: #ec3f5a;
+  border: 2px solid #573500;
+  border-radius: 100%;
+  visibility: hidden;
+}
+
+#radioisTimenoLimitMin:checked::before {
+  visibility: visible;
+}
+
+.Confirm-button-container {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 45px;
+  /* ปรับตำแหน่งลงมาเล็กน้อย */
+  left: 35%;
+  z-index: 1001;
+  /* ให้ z-index มากกว่า #logo */
+}
+
+.Confirm-button {
+  background-color: #f9e050;
+  color: #9b5f00;
+  border: 6px solid #fabd1e;
+  border-radius: 30px;
+  padding: 12px 35px;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  font-family: "alegreya-sans sc-regular";
+}
+
+.Confirm-button:disabled {
+  cursor: not-allowed;
+}
+
+.Confirm-button:hover {
+  background-color: #9b5f00;
+  color: #f9e050;
+}
+
+.Reset-button-container {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 45px;
+  /* ปรับตำแหน่งลงมาเล็กน้อย */
+  left: 53%;
+  z-index: 1001;
+  /* ให้ z-index มากกว่า #logo */
+}
+
+.Reset-button {
+  background-color: #cecece;
+  color: #000000;
+  border: 6px solid #dbe6ff;
+  border-radius: 30px;
+  padding: 12px 50px;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  font-family: "alegreya-sans sc-regular";
+}
+
+.Reset-button:hover {
+  background-color: #39393a;
+  color: #f0f0f0;
+}
