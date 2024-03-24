@@ -14,7 +14,13 @@ function StartPage() {
     setName(value);
   };
   const navigateToJoin = () => {
+    localStorage.setItem("name", name);
     navigate("/join");
+  };
+
+  const navigateToSetting = () => {
+    localStorage.setItem("host", true);
+    navigate("/Setting");
   };
   return (
     <div className="App">
@@ -28,20 +34,35 @@ function StartPage() {
         <div id="logoStart">
           <img src={logo} alt="Logo" />
         </div>
-        <div className="name-box">
-          <input
-            className="nameinput-container"
-            name="name"
-            placeholder="INPUT YOUR NAME . . ."
-            onChange={(event) => handleNameChange(event.target.value)}
-          />
+        <div>
+          <div className="name-box">
+            <input
+              className="nameinput-container"
+              name="name"
+              placeholder="INPUT YOUR NAME . . ."
+              onChange={(event) => handleNameChange(event.target.value)}
+            />
+            {/* เดี๋ยวกลับมาแก้นะจ้ะ */}
+            {/ /g.test(name) && <p>ห้ามใส้เว้นวรรคนะ</p>}
+          </div>
         </div>
       </div>
       <div className="JoinStart-button-container">
-        <button className="JoinStart-button" onClick={navigateToJoin}>
+        <button
+          className="JoinStart-button"
+          onClick={navigateToJoin}
+          disabled={
+            / /g.test(name) || !name.length || !localStorage.getItem("time")
+          }
+        >
           JOIN
         </button>
       </div>{" "}
+      <div className="setting-button-container">
+        <button className="setting-button" onClick={navigateToSetting}>
+          SETTING
+        </button>
+      </div>
     </div>
   );
 }
