@@ -35,6 +35,7 @@ function MapPage() {
     setStartingTimestamp(Date.now());
   };
   const handleConfirmPlan = () => {
+    const file = new Blob([plan], { type: "text/plain;charset=utf-8" });
     setClickChange(false);
     localStorage.removeItem("timerTimestamp");
   };
@@ -47,9 +48,9 @@ function MapPage() {
   });
   useEffect(() => {
     let temp = [];
-    for (let i = 0; i < 15; i++) {
+    for (let i = 0; i < localStorage.getItem("row"); i++) {
       temp[i] = [];
-      for (let j = 0; j < 15; j++) {
+      for (let j = 0; j < localStorage.getItem("col"); j++) {
         temp[i][j] = {
           row: i,
           col: j,

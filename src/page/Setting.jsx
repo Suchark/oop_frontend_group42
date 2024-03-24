@@ -32,7 +32,8 @@ function SettingPage() {
         setMap("15*15");
       }
     }
-    localStorage.setItem("map", map);
+    localStorage.setItem("row", map.charAt(0));
+    localStorage.setItem("col", map.charAt(0));
     localStorage.setItem("time", time);
     navigate("/Start");
   };
