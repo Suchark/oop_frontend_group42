@@ -61,9 +61,9 @@ function MapPage() {
           owner: {
             name:
               i === 5 && j === 5
-                ? "123"
+                ? localStorage.getItem("name")
                 : Math.floor(Math.random() * 2) == 0
-                ? "123"
+                ? localStorage.getItem("name")
                 : "000",
             cityCenter_m: 5,
             cityCenter_n: 5,
