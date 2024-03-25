@@ -25,15 +25,16 @@ function SettingPage() {
     if (map == "ramdom") {
       const rand = Math.floor(Math.random() * 3);
       if (rand == 0) {
-        setMap("7*7");
+        setMap("7x7");
       } else if (rand == 1) {
-        setMap("11*11");
+        setMap("11x11");
       } else {
-        setMap("15*15");
+        setMap("15x15");
       }
     }
-    localStorage.setItem("row", map.charAt(0));
-    localStorage.setItem("col", map.charAt(0));
+    const rowCol = map.split("x");
+    localStorage.setItem("row", rowCol[0]);
+    localStorage.setItem("col", rowCol[1]);
     localStorage.setItem("time", time);
     navigate("/Start");
   };
